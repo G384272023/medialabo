@@ -14,17 +14,16 @@ h1 {
 	color:white;
 	text-shadow: navy 1px 0 10px;
 }
-body {
-		background: linear-gradient(white,ffefaf);
-	  }
+
+
 	  
 h2 {
+	
+	
 	font-family:cursive;
-	color:#3f3faf
-	
-	
+	color:#3f3faf;
+	background: linear-gradient(.25turn,white ,50%,#ffefaf );
 }
-
 div#zentai {
 	display: flex;
 	display: grid;                      
