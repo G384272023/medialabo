@@ -46,6 +46,7 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
+console.log(data);
 for(let n of data){
 	console.log(n);
 }
