@@ -48,5 +48,25 @@ let data = {
 ////////// 課題3-2 ここからプログラムを書こう
 console.log(data);
 for(let n of data){
-	console.log(n);
+	console.log(n.coord);
+}
+for(let n of data.weather){
+	console.log(n.description);
+}
+for(let n of data){
+	console.log(n.main.temp_min);
+  console.log(n.main.temp_max);
+}
+for(let n of data){
+	console.log(n.humidity);
+}
+for(let n of data){
+	console.log(n.wind.speed);
+}
+for(let n of data){
+	console.log(n.wind.speed);
+  console.log(n.wind.deg);
+}
+for(let n of data){
+	console.log(n.name);
 }
