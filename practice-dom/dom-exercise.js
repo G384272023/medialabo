@@ -13,10 +13,16 @@ let data = [
 ];
 //// 注意: 以上は編集しないこと!
 
-// 練習4-2 メッセージ追加プログラム
+let h2 = document.querySelector('h2#ex42');
+let p=document.createElement('p');
+p.textContent='写真表と年の緯度経度のページです';
+p.style.textEmphasis='sesame green';
+h2.insertAdjacentElement('afterend', p); 
 
 // 練習4-3 写真表作成プログラム
-
+//let img=document.createElement('img');
+//img.src='taro.png';
+//let p=document.createE
 
 // 練習4-4 箇条書き削除プログラム
 
