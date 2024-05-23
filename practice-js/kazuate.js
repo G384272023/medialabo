@@ -21,7 +21,9 @@ function hantei() {
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
-  if(kaisu<=4){
-    
+  if(kaisu==yoso){
+    System.out.println("正解");
+  }else if(kaisu<yoso||kaisu>yoso){
+    System.out.println("間違い");
   }
 }
