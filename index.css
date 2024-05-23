@@ -6,23 +6,31 @@ p{
 
 h1{
     
-    color:rgb(30, 255, 0);
-    text-shadow: aquamarine 10px 0 10px;
+    color:rgb(0, 0, 0);
+    text-shadow: rgb(82, 180, 255) 10px 0 10px;
 }
 h2{
-    color:rgb(50, 255, 36);
-    text-shadow: rgb(233, 241, 22) 1px 0 10px;
+    color:rgb(0, 0, 0);
+    text-shadow: rgb(83, 198, 244) 1px 0 10px;
 }
 h3{
-    color:rgb(70, 249, 57);
-    text-shadow: rgb(255, 217, 0) 1px 0 10px;
+    color:rgb(0, 0, 0);
+    text-shadow: rgb(0, 153, 255) 1px 0 10px;
 }
 a{
     color:chartreuse;
 }
 html{
-    background-color: rgb(255, 255, 255);
-    body{
-        background-color: rgb(10, 0, 0);
-    }
+    background-image: linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 90%, #b4b07f 90%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 92%, #b4b07f 92%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 85%, #c5a68e 85%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 89%, #c5a68e 89%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 80%, #ba9499 80%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 86%, #ba9499 86%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 75%, #9f8fa4 75%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 83%, #9f8fa4 83%),
+                    linear-gradient(175deg, rgb(0 0 0 / 0%) 70%, #74a6ae 70%),
+                    linear-gradient( 85deg, rgb(0 0 0 / 0%) 80%, #74a6ae 80%);
 }
