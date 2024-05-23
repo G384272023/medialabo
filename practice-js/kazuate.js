@@ -28,9 +28,9 @@ function hantei() {
   } else if (kaisu <= 2) {
     if (kotae == yoso) {
       console.log("正解です．おめでとう!");
-    } else if (kotae < yoso) {
-      console.log("まちがい、答えはもっと大きいですよ");
     } else if (kotae > yoso) {
+      console.log("まちがい、答えはもっと大きいですよ");
+    } else if (kotae < yoso) {
       console.log("まちがい、答えはもっと小さいですよ");
     }
   }
