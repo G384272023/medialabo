@@ -1,5 +1,5 @@
 // 答え
-let kotae = Math.floor(Math.random()*10) + 1;
+let kotae = Math.floor(Math.random() * 10) + 1;
 console.log('答え（デバッグ用）: ' + kotae);
 
 // 入力回数（予想回数）
@@ -17,13 +17,22 @@ hantei();
 function hantei() {
   // 将来ここでは 4 ではなくテキストボックスに指定された数値を yoso に代入する
   let yoso = 4;
-  
+
   // 課題3-1: 正解判定する
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
-  if(kaisu==yoso){
-    System.out.println("正解");
-  }else if(kaisu<yoso||kaisu>yoso){
-    System.out.println("間違い");
+  if (kaisu == 4) {
+    console.log("答えは"+kotae+"でした．すでにゲームは終わっています");
+  } else if (kaisu == 3) {
+    console.log("まちがい．残念でした答えは"+kotae+"です．");
+  } else if (kaisu <= 2) {
+    if (kotae == yoso) {
+      console.log("正解です．おめでとう!");
+    } else if (kotae < yoso) {
+      console.log("まちがい、答えはもっと大きいですよ");
+    } else if (kotae > yoso) {
+      console.log("まちがい、答えはもっと小さいですよ");
+    }
   }
+
 }
