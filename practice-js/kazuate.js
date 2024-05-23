@@ -22,9 +22,13 @@ function hantei() {
   // kotae と yoso が一致するかどうか調べて結果を出力
   // 課題3-1における出力先はコンソール
   if (kaisu == 4) {
-    console.log("答えは"+kotae+"でした．すでにゲームは終わっています");
+    console.log("答えは" + kotae + "でした．すでにゲームは終わっています");
   } else if (kaisu == 3) {
-    console.log("まちがい．残念でした答えは"+kotae+"です．");
+    if (kotae == yoso) {
+      console.log("正解です．おめでとう!");
+    } else if (kotae != yoso) {
+      console.log("まちがい．残念でした答えは" + kotae + "です．");
+    }
   } else if (kaisu <= 2) {
     if (kotae == yoso) {
       console.log("正解です．おめでとう!");
