@@ -42,8 +42,7 @@ p3.insertAdjacentElement('beforeend',img2);
 div2.insertAdjacentElement('beforeend',p3);
 // 練習4-4 箇条書き削除プログラム
 
-let w = document.querySelector('li');        
-w.remove();
+
 
 // 練習4-5 箇条書き追加プログラム
 
