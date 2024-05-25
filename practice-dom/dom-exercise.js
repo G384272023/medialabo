@@ -45,7 +45,6 @@ let li = document.querySelector('ul#location');
 let li2 = document.querySelectorAll('li');
 for (let n of li2) {
 	n.remove();
-
 }
 // 練習4-5 箇条書き追加プログラム
 let li3 = document.querySelector('ul#location');
