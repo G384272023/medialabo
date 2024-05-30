@@ -46,11 +46,6 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log(data.name);
-for(let a of "name"){
-  console.log(a.name);
-}
-
 let btn = document.querySelector('button#botton');
 btn.addEventListener('click', hantei);
 
