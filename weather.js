@@ -46,13 +46,72 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
-console.log('情報     '+data.base);
-console.log('経度   '+data.coord.lon);
-console.log('緯度   '+data.coord.lat);
-console.log('天気   '+data.weather[0].description);
-console.log('最低気温   '+data.main.temp_min);
-console.log('最高気温   '+data.main.temp_max);
-console.log('湿度   '+data.main.humidity);
-console.log('風速   '+data.wind.speed);
-console.log('風向   '+data.wind.deg);
-console.log('都市名:'+data.name);
+let b1 = document.querySelector('button#print');
+b1.addEventListener('click', iroiro);
+let w=document.querySelector('body');
+ w.style.backgroundColor = '#E6E6FA';
+function iroiro() {
+  
+  let i = document.querySelector('input[name="basho"]');
+  let g=i.value;
+  let url = 'https://www.nishita-lab.org/web-contents/jsons/openweather/'+g+'.json';
+  axios.get(url)
+  .then(showResult)   // 通信成功
+  .catch(showError)   // 通信失敗
+  .then(finish);      // 通信の最後の処理
+  
+  let r = Math.floor(Math.random() * 12)+1;
+  let body = document.querySelector('body');
+  if(r==1){
+    body.style.backgroundColor = '#ffbcbc';
+  }else if(r==2){
+    body.style.backgroundColor = '#ffbcdd';
+  }else if(r==3){
+    body.style.backgroundColor = '#ffbcff';
+  }else if(r==4){
+    body.style.backgroundColor = '#ddbcff';
+  }else if(r==5){
+    body.style.backgroundColor = '#bcbcff';
+  }else if(r==6){
+    body.style.backgroundColor = '#bcddff';
+  }else if(r==7){
+    body.style.backgroundColor = '#bcffff';
+  }else if(r==8){
+    body.style.backgroundColor = '#bcffdd';
+  }else if(r==9){
+    body.style.backgroundColor = '#bcffbc';
+  }else if(r==10){
+    body.style.backgroundColor = '#ddffbc';
+  }else if(r==11){
+    body.style.backgroundColor = '#fffbc';
+  }else if(r==12){
+    body.style.backgroundColor = '#ffddbc';
+  }
+  
+}
+function showResult(resp){
+  let data = resp.data;
+  if (typeof data === 'string') {
+    data = JSON.parse(data);
+  }
+  console.log(data);
+  console.log(data.name);
+  console.log(data.main.temp_max);
+  console.log(data.main.temp_min);
+  let p1 = document.querySelector('p#name');
+p1.textContent = ("都市名: "+data.name+"🏙️"); 
+let p2 = document.querySelector('p#temp_max');
+p2.textContent = ("最高気温: "+data.main.temp_max+"℃ 🥵");
+let p3 = document.querySelector('p#temp_min');
+p3.textContent = ("最低気温: "+data.main.temp_min+"℃ 🥶");
+let p4= document.querySelector('p#situ');
+p4.textContent = ("湿度: "+data.main.humidity+"% 💦");
+
+}
+
+function showError(err) {
+  console.log(err);
+}
+function finish() {
+  console.log('Ajax 通信が終わりました');
+}

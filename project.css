@@ -9,22 +9,31 @@ h1{
     color:rgb(63, 84, 243);
     text-shadow: aquamarine 10px 0 10px;
 }
-body{
-    background-color:  background-image linear-gradient(175deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
-    linear-gradient( 85deg, rgb(0 0 0 / 0%) 95%, #8da389 95%),
-    linear-gradient(175deg, rgb(0 0 0 / 0%) 90%, #b4b07f 90%),
-    linear-gradient( 85deg, rgb(0 0 0 / 0%) 92%, #b4b07f 92%),
-    linear-gradient(175deg, rgb(0 0 0 / 0%) 85%, #c5a68e 85%),
-    linear-gradient( 85deg, rgb(0 0 0 / 0%) 89%, #c5a68e 89%),
-    linear-gradient(175deg, rgb(0 0 0 / 0%) 80%, #ba9499 80%),
-    linear-gradient( 85deg, rgb(0 0 0 / 0%) 86%, #ba9499 86%),
-    linear-gradient(175deg, rgb(0 0 0 / 0%) 75%, #9f8fa4 75%),
-    linear-gradient( 85deg, rgb(0 0 0 / 0%) 83%, #9f8fa4 83%),
-    linear-gradient(175deg, rgb(0 0 0 / 0%) 70%, #74a6ae 70%),
-    linear-gradient( 85deg, rgb(0 0 0 / 0%) 80%, #74a6ae 80%);
+body {
+
+    background: linear-gradient(125deg, #ffffff, #9df6fe, #72c7ff, #30a9ff, #1519ff);
+    background-size: 500%;
+    margin: 0;
+    padding: 0;
+    height: 140vh;
+    animation: beAnimation 15s linear infinite;
+}
+
+@keyframes beAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
 }
 ul{
-    color:rgb(64, 146, 248);
+    color:rgb(0, 255, 157);
     text-shadow: aquamarine 10px 0 10px;
 }
 input{
