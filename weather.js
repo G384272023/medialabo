@@ -56,9 +56,9 @@ function hantei() {
   let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
   let o = os.item(idx);       // os の idx 番目の要素
 
-    let kensaku=o.value;
-    let url = "https://www.nishita-lab.org/web-contents/jsons/openweather/"+kensaku+".json";
-    console.log(url);
+  let kensaku=o.value;
+  let url = "https://www.nishita-lab.org/web-contents/jsons/openweather/"+kensaku+".json";
+  console.log(url);
     
 
   
