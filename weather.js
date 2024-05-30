@@ -115,3 +115,9 @@ function showError(err) {
 function finish() {
   console.log('Ajax 通信が終わりました');
 }
+console.log(data.name);
+console.log(data.weather[0].description);
+console.log(data.main.temp_max);
+console.log(data.main.temp_min);
+console.log(data.wind.deg);
+console.log(data.wind.speed);
