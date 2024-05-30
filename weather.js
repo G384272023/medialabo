@@ -51,7 +51,7 @@ for(let a of "name"){
   console.log(a.name);
 }
 
-let btn = document.querySelector('button#botton');
+let btn = document.querySelector('button#btn');
 btn.addEventListener('click', hantei);
 
 function hantei() {
