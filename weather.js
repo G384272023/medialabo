@@ -46,6 +46,11 @@ let data = {
 };
 
 ////////// 課題3-2 ここからプログラムを書こう
+console.log(data.name);
+for(let a of "name"){
+  console.log(a.name);
+}
+
 let btn = document.querySelector('button#botton');
 btn.addEventListener('click', hantei);
 
@@ -56,9 +61,9 @@ function hantei() {
   let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
   let o = os.item(idx);       // os の idx 番目の要素
 
-  let kensaku=o.value;
-  let url = "https://www.nishita-lab.org/web-contents/jsons/openweather/"+kensaku+".json";
-  console.log(url);
+    let kensaku=o.value;
+    let url = "https://www.nishita-lab.org/web-contents/jsons/openweather/"+kensaku+".json";
+    console.log(url);
     
 
   
@@ -114,5 +119,3 @@ console.log(data.main.temp_max);
 console.log(data.main.temp_min);
 console.log(data.wind.deg);
 console.log(data.wind.speed);
-
-
