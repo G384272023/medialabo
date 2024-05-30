@@ -56,10 +56,10 @@ btn.addEventListener('click', hantei);
 
 function hantei() {
   let s= document.querySelector('select#mati');
-  let idx = s.selectedIndex; 
+  let idx = s.selectedIndex;  // idx 番目の option が選択された
 
-  let os = s.querySelectorAll('option'); 
-  let o = os.item(idx);      
+  let os = s.querySelectorAll('option');  // s の子要素 option をすべて検索
+  let o = os.item(idx);       // os の idx 番目の要素
 
     let kensaku=o.value;
     let url = "https://www.nishita-lab.org/web-contents/jsons/openweather/"+kensaku+".json";
@@ -69,22 +69,22 @@ function hantei() {
   
 
     axios.get(url)
-    .then(showResult)   // 通信成功
-    .catch(showError)   // 通信失敗
-    .then(finish);      // 通信の最後の処理
+        .then(showResult)   // 通信成功
+        .catch(showError)   // 通信失敗
+        .then(finish);      // 通信の最後の処理
     
 }
-
+// 通信が成功した時の処理
 function showResult(resp) {
-    
+    // サーバから送られてきたデータを出力
     let data = resp.data;
 
-    
+    // data が文字列型なら，オブジェクトに変換する
     if (typeof data === 'string') {
         data = JSON.parse(data);
     }
 
-    
+    // data をコンソールに出力
     let tenki1=document.querySelector("span#a1");
     tenki1.textContent=data.name;
     let tenki2=document.querySelector("span#a2");
@@ -102,9 +102,22 @@ function showResult(resp) {
     let tenki9 = document.querySelector("span#a9");
     tenki9.textContent=data.main.humidity;
 }
+
+// 通信エラーが発生した時の処理
 function showError(err) {
     console.log(err);
 }
+
+// 通信の最後にいつも実行する処理
 function finish() {
     console.log('Ajax 通信が終わりました');
 }
+
+console.log(data.name);
+console.log(data.weather[0].description);
+console.log(data.main.temp_max);
+console.log(data.main.temp_min);
+console.log(data.wind.deg);
+console.log(data.wind.speed);
+
+
