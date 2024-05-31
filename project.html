@@ -6,55 +6,37 @@
     <link rel="stylesheet" href="project.css">
     <script src="weather.js" defer></script>
   </head>
-  <div id="result"></div> 
   <body>
-   <p><h1>世界の天気</h1></p>
-   <label for="list">都市の検索</label>
-    <select id="mati" name="mati">
-      <option value=" 360630">カイロ（エジプト）</option>
-      <option value=" 524901">モスクワ（ロシア）</option>
+    <h1>世界の天気</h1>
+    <label for="city">都市の検索</label>
+    <select id="city" name="city">
+      <option value="360630">カイロ（エジプト）</option>
+      <option value="524901">モスクワ（ロシア）</option>
       <option value="993800">ヨハネスブルク（南アフリカ）</option>
       <option value="1816670">北京（中華人民共和国）</option>
       <option value="1850147">東京（日本）</option>
       <option value="1880252">シンガポール</option>
       <option value="2147714">シドニー（オーストラリア）</option>
       <option value="2643743">ロンドン（イギリス）</option>
-      <option value=" 2968815">パリ（フランス）</option>
-      <option value=" 3451189">リオデジャネイロ（プラジル）</option>
+      <option value="2968815">パリ（フランス）</option>
+      <option value="3451189">リオデジャネイロ（ブラジル）</option>
       <option value="5128581">ニューヨーク（アメリカ合衆国）</option>
-      <option value="'5368361">ロサンゼルス（アメリカ合衆国）</option>
+      <option value="5368361">ロサンゼルス（アメリカ合衆国）</option>
     </select>
 
-      <button id="botton">検索</button>
-    <h3>
+    <button id="button">検索</button>
+
+    <div id="result">
       <div class="list">
-        <h2>
-        <div class="tosimei">都市名:
-          <span id="a1"></span>
-        </div>
-        </h2>
-        <div class="tenki">天気:
-          <span id="a2"></span>
-        </div>
-        <div class="heikin">平均気温:
-          <span id="a7"></span>
-        </div>
-        <div class="saiko">最高気温:
-          <span id="a5"></span>
-        </div>
-        <div class="saitei">最低気温:
-          <span id="a6"></span>
-        </div>
-        <div class="situdo">湿度:
-          <span id="a9"></span>
-        </div>
-        <div class="husoku">風速:
-          <span id="a3"></span>
-        </div>
-        <div class="muki">風向き:
-          <span id="a4"></span>
-        </div>
+        <h2>都市名: <span id="a1"></span></h2>
+        <div class="tenki">天気: <span id="a2"></span></div>
+        <div class="heikin">平均気温: <span id="a7"></span></div>
+        <div class="saiko">最高気温: <span id="a5"></span></div>
+        <div class="saitei">最低気温: <span id="a6"></span></div>
+        <div class="situdo">湿度: <span id="a9"></span></div>
+        <div class="husoku">風速: <span id="a3"></span></div>
+        <div class="muki">風向き: <span id="a4"></span></div>
       </div>
-    </h3>
+    </div>
   </body>
 </html>
